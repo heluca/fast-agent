@@ -386,6 +386,12 @@ class ModelDatabase:
         "qwen/qwen3-next-80b-a3b-instruct": HF_PROVIDER_QWEN3_NEXT,
         "deepseek-ai/deepseek-v3.1": HF_PROVIDER_DEEPSEEK31,
         "deepseek-ai/deepseek-v3.2": HF_PROVIDER_DEEPSEEK32,
+        # Qwen VL (Vision-Language) Models for generic provider
+        "qwen3-vl-30b-a3b-instruct-ud-q5_k_xl": ModelParameters(
+            context_window=131072,
+            max_output_tokens=8192,
+            tokenizes=QWEN_MULTIMODAL,
+        ),
     }
 
     @classmethod
